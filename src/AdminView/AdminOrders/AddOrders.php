@@ -11,8 +11,14 @@
     <form method="post" >
         <h2>Introduce los datos para registrar un nuevo pedido</h2>
         <input type="decimal" name="precio_total" placeholder="Precio del pedido"><br><br>
-        <input type="text" name="estado_pedido" placeholder="Estado del pedido"><br><br>
         <input type="number" name="id_usuario" placeholder="Identificador de usuario"><br><br>
+        <select name="estado">
+            <option value="Pendiente">Pendiente</option>
+            <option value="En preparacion">En preparación</option>
+            <option value="Enviado">Enviado</option>
+            <option value="Entregado">Entregado</option>
+            <option value="Cancelado">Cancelado</option>
+        </select><br><br>
         <textarea type="text+" name="descripcion" placeholder="Detalles del pedido" cols="50" rows="10"></textarea><br><br>
         <input type="submit" name="register" ><br><br>
         <b><a href="adminOrders.php">Volver atrás</a></b><br><br>

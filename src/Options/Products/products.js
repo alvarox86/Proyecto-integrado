@@ -99,9 +99,10 @@ const cartItems = []; // Array para almacenar los productos del carrito
 
 $d.addEventListener("click", e => {
     // Agregar producto al carrito
+    console.log(cartItems);
     if (e.target.matches(".addCart")) {
         const priceId = e.target.getAttribute("data-id");
-        const quantity = 1; // Puedes modificar esto para permitir cantidades personalizadas
+        const quantity = 1;
 
         // Verificar si el producto ya está en el carrito
         const existingItem = cartItems.find(item => item.priceId === priceId);
@@ -109,6 +110,19 @@ $d.addEventListener("click", e => {
             existingItem.quantity += quantity; // Aumentar la cantidad si ya existe
         } else {
             cartItems.push({ priceId, quantity }); // Agregar nuevo producto al carrito
+        }
+    }
+
+    if (e.target.matches(".delete-product")) {
+        const priceId = e.target.getAttribute("data-id");
+
+        // Encontrar el índice del producto en el carrito
+        const itemIndex = cartItems.findIndex(item => item.priceId === priceId);
+        if (itemIndex > -1) {
+            cartItems.splice(itemIndex, 1); // Eliminar el producto del carrito
+            console.log(`Producto eliminado: ${priceId}`);
+        } else {
+            console.log(`El producto ${priceId} no se encontró en el carrito.`);
         }
     }
 

@@ -15,7 +15,7 @@
 		<input type="text" name="direccion" placeholder="Dirección"><br><br>
 		<input type="password" name="contrasena" placeholder="Contraseña"><br><br>
         <input type="submit" name="register"><br><br>
-        <b><a href="../index.php">Volver al inicio</a></b><br><br>
+        <b><a href="../indexloged.php">Volver al inicio</a></b><br><br>
 		<b><a href="../login/login.php">Volver a iniciar sesión</a></b>
     </form>
 </div>

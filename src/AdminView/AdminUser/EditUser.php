@@ -27,7 +27,10 @@
             <input type="email" name="correo" placeholder="Correo electrónico"><br><br>
             <input type="text" name="direccion" placeholder="Dirección"><br><br>
             <input type="password" name="contrasena" placeholder="Contraseña"><br><br>
-            <input type="text" name="tipousuario" placeholder="Tipo de usuario"><br><br>
+            <select name="tipousuario">
+                <option value="admin">admin</option>
+                <option value="user">user</option>
+            </select><br><br>
             <input type="submit" name="edit" value="Editar"><br><br>
             <p><b>Nota:</b></p>
             <p><b>Para editar el usuario deberás indicar el identificador del usuario </b></p>
@@ -62,6 +65,7 @@ if (isset($_POST['borrar'])) {
 } 
 
 if (isset($_POST['edit'])) {
+    echo 
     if (strlen($_POST['nombre']) >= 1 && strlen($_POST['contrasena']) >= 1 && strlen($_POST['correo']) >= 1 && strlen($_POST['direccion']) && strlen($_POST['id']) >= 1) {
 	    $id = trim($_POST['id']);
         $nombre = trim($_POST['nombre']);
@@ -72,8 +76,7 @@ if (isset($_POST['edit'])) {
 		include("../../assets/ConexDb/montatupc_con_db.php");
 	    $consultaEdit = "UPDATE usuarios SET nombre='$nombre', correo='$correo', direccion='$direccion', contrasena='$contrasena', tipo_usuario='$tipousuario' WHERE id_usuario='$id'";
 	    $resultadoEdit = mysqli_query($conex,$consultaEdit);
-        $usuariopermitido = ['admin', 'user'];
-        if (in_array($tipousuario, $usuariopermitido)) {
+        if ($tipousuario) {
             if ($resultadoEdit) {
                 ?> 
                 <h3>¡Editado corectamente!</h3>

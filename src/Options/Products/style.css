@@ -157,13 +157,9 @@ header{
     line-height: 18px;
 }
 
-.cart{
-    width: 39px;
-    height: 38px;
-}
-
 .cart-products{
     position: absolute!important ;
+    overflow: scroll !important;
     top: 80px;
     right: 20px;
     background-color: #fff;
@@ -171,7 +167,9 @@ header{
     box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
     display: none;
     min-width: 250px;
+    max-height: 500px; 
 }
+
 
 .componentes{
     display: flex;

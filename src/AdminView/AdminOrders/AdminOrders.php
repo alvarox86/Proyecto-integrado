@@ -13,6 +13,7 @@
         <ul>
             <a href="WatchOrders.php"><li>Visualizar</li></a>
             <a href="AddOrders.php"><li>Añadir</li></a>
+            <a href="EditOrders.php"><li>Editar</li></a>
         </ul>
         </nav>
     <a href="../admin.php" class="vuelta"><h3>Volver atrás</h3></a>
