@@ -1,5 +1,3 @@
-alert("Debes seleccionar todos los componentes para poder montar el equipo!!!!");
-
 //Importamos las keys de la API de stripe
 import KEYS from "../../assets/Keys.js";
 
@@ -99,6 +97,7 @@ Promise.all([
 
 const cartItems = []; // Array para almacenar los productos del carrito
 
+
 $d.addEventListener("click", e => {
     // Agregar producto al carrito
     if (e.target.matches(".addCart")) {
@@ -113,28 +112,33 @@ $d.addEventListener("click", e => {
             cartItems.push({ priceId, quantity }); // Agregar nuevo producto al carrito
         }
     }
-
-    // Realizar pedido
-    if (e.target.matches(".realizarPedido ")) {
-        // Crear un array de lineItems a partir de cartItems
-        const lineItems = cartItems.map(item => ({
-            price: item.priceId,
-            quantity: item.quantity
-        }));
-
-        // Crear sesión de checkout
-        Stripe(KEYS.public).redirectToCheckout({
-            lineItems: lineItems,
-            mode: "payment",
-            successUrl: "http://localhost/PPI%20pruebas/src/assets/succes.php",
-            cancelUrl: "http://localhost/PPI%20pruebas/src/assets/cancel.php"
-        })
-        .then(res => {
-            if (res.error) {
-                $componentes.insertAdjacentElement("afterend", res.error.message);
+    
+        if (e.target.matches(".realizarPedido")) {// Realizar pedido
+            if(cartItems.length >= 10 ){
+                // Crear un array de lineItems a partir de cartItems
+                const lineItems = cartItems.map(item => ({
+                    price: item.priceId,
+                    quantity: item.quantity
+                }));
+        
+                // Crear sesión de checkout
+                Stripe(KEYS.public).redirectToCheckout({
+                    lineItems: lineItems,
+                    mode: "payment",
+                    successUrl: "http://localhost/PPI%20pruebas/src/assets/succes.php",
+                    cancelUrl: "http://localhost/PPI%20pruebas/src/assets/cancel.php"
+                })
+                .then(res => {
+                    if (res.error) {
+                        $componentes.insertAdjacentElement("afterend", res.error.message);
+                    }
+                });
             }
-        });
-    }
+            else {
+            alert("Debes introducir todos los componentes que se necesitan para montar un equipo y podrás realizar el pedido");
+            }
+        }
+    
 });
 
 //-------------------------------------------------------------------------------------------
