@@ -55,9 +55,9 @@
                 <div class="footerSection links">
                     <h4>Enlaces rápidos</h4>
                     <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Catálogo de Componentes</a></li>
-                        <li><a href="#">Configura tu PC</a></li>
+                        <li><a href="../../indexloged.php">Inicio</a></li>
+                        <li><a href="products.php">Catálogo de Componentes</a></li>
+                        <li><a href="build.php">Configura tu PC</a></li>
                     </ul>
                 </div>
                 <div class="footerSection contact">

@@ -25,7 +25,7 @@
                 <div class="imagenes" id="imagenes"></div>
                 <button id="anterior"><</button>
                 <button id="siguiente">></button>
-            </div>
+            </div><br><br><br><br><br><br>
             <script src="main.js"></script>
             <h2>Marcas colaboradoras</h2>
 
@@ -39,9 +39,9 @@
                 <div class="footerSection links">
                     <h4>Enlaces rápidos</h4>
                     <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Catálogo de Componentes</a></li>
-                        <li><a href="#">Configura tu PC</a></li>
+                        <li><a href="indexloged.php">Inicio</a></li>
+                        <li><a href="Options/Products/products.php">Catálogo de Componentes</a></li>
+                        <li><a href="Options/BuildPc/build.php">Configura tu PC</a></li>
                     </ul>
                 </div>
                 <div class="footerSection contact">

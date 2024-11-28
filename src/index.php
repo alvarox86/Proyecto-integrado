@@ -28,15 +28,20 @@
         </header>
 
         <main class="mainContent">
-        <div class="carrusel">
-        <div class="imagenes">
-            <img src="img/carrito.png" alt="Imagen 1">
-            <img src="img/logo.png" alt="Imagen 2">
-            <img src="img/login.png" alt="Imagen 3">
-        </div>
-            <button id="prev">Anterior</button>
-            <button id="next">Siguiente</button>
-        </div>
+            <h2>Nuestros productos</h2>
+                <div class="carrusel">
+                    <div class="imagenes" id="imagenes"></div>
+                    <button id="anterior"><</button>
+                    <button id="siguiente">></button>
+                </div><br><br><br><br><br><br>
+
+            <script src="main.js"></script>
+            
+            <h2>Marcas colaboradoras</h2>
+
+            <div id="data-grid" class="data-grid"></div>
+
+            <div id="data" class="data"></div>
         </main>
 
         <footer class="footer">
