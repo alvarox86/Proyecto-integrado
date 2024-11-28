@@ -12,7 +12,7 @@
         <h2>Introduce los datos para registrar un nuevo pedido</h2>
         <input type="decimal" name="precio_total" placeholder="Precio del pedido"><br><br>
         <input type="number" name="id_usuario" placeholder="Identificador de usuario"><br><br>
-        <select name="estado">
+        <select name="estado_pedido">
             <option value="Pendiente">Pendiente</option>
             <option value="En preparacion">En preparación</option>
             <option value="Enviado">Enviado</option>
@@ -53,7 +53,7 @@ if (isset($_POST['register'])) {
     else {
 	    echo "<h3>¡Por favor complete los campos!</h3>";
     }
-}
-?>
+    }
+    ?>
     </body>
 </html>

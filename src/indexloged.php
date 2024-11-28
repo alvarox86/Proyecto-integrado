@@ -22,16 +22,13 @@
         <main class="mainContent">
             <h2>Lo que vendemos</h2>
             <div class="carrusel">
-                <div class="imagenes">
-                    <img src="img/carrito.png" alt="Imagen 1">
-                    <img src="img/logo.png" alt="Imagen 2">
-                    <img src="img/login.png" alt="Imagen 3">
-                </div>
-                    <button id="prev"> < </button>
-                    <button id="next"> > </button>
-                </div>
+                <div class="imagenes" id="imagenes"></div>
+                <button id="anterior"><</button>
+                <button id="siguiente">></button>
             </div>
+            <script src="main.js"></script>
         </main>
+
 
         <footer class="footer">
             <div class="footerContent">

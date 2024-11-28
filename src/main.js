@@ -1,20 +1,60 @@
-//----------------------------------------------------------------------------------------
-let currentIndex = 0;
-const images = document.querySelectorAll('.imagenes img');
-const totalImages = images.length;
+const imagenesElement = document.getElementById('imagenes');
+const anteriorButton = document.getElementById('anterior');
+const siguienteButton = document.getElementById('siguiente');
 
-document.getElementById('next').addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % totalImages;
-    updateCarousel();
-});
+const imagenes = [
+    'img/carrito.png',
+    'img/login.png',
+    'img/logo.png',
+    'img/carrito.png',
+    'img/login.png',
+    'img/logo.png',
+    'img/carrito.png',
+    'img/login.png',
+    'img/logo.png',
+];
 
-document.getElementById('prev').addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-    updateCarousel();
-});
+let indiceActual = 0;
+const cantidadImagenes = 3; // Cantidad de imágenes visibles
 
-function updateCarousel() {
-    const offset = -currentIndex * 100; // Mover el carrusel
-    document.querySelector('.imagenes').style.transform = `translateX(${offset}%)`;
+function mostrarImagenes() {
+    // Remove all child elements
+    imagenesElement.replaceChildren();
+
+    // Add the new images
+    for (let i = indiceActual; i < indiceActual + cantidadImagenes && i < imagenes.length; i++) {
+        const img = document.createElement('img');
+        img.src = imagenes[i];
+        img.alt = `Imagen ${i + 1}`;
+        imagenesElement.appendChild(img);
+    }
+
+    // Update the button states
+    anteriorButton.disabled = indiceActual === 0;
+    siguienteButton.disabled = indiceActual >= imagenes.length - cantidadImagenes;
+
+    // Add the animation class
+    imagenesElement.classList.add('animate');
+    setTimeout(() => {
+        imagenesElement.classList.remove('animate');
+    }, 500);
 }
-//----------------------------------------------------------------------------------------
+
+// Navegar a la imagen anterior
+anteriorButton.addEventListener('click', () => {
+    if (indiceActual > 0) {
+        indiceActual--;
+    }
+    mostrarImagenes();
+});
+
+// Navegar a la imagen siguiente
+siguienteButton.addEventListener('click', () => {
+    if (indiceActual < imagenes.length - cantidadImagenes) {
+        indiceActual++;
+    }
+    mostrarImagenes();
+});
+
+// Inicializar el carrusel
+mostrarImagenes();

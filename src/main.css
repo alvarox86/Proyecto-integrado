@@ -5,6 +5,7 @@ body {
 	font-size: 1em;	
     color: #343333;	
 }
+
 header{
     background-color: #f2f2f2;
     width: 99,5%;
@@ -23,17 +24,6 @@ header{
     background:#f56f3a;
     border-radius:50px;}
 }
-
-.mainContent{
-    background-color: #f2f2f2;
-    height: 1300px;
-    margin-top: 5px;
-    margin-bottom:5px ;
-    padding: 30px;
-    border: solid, 5px, #f56f3a;
-    text-align: center;
-}
-
 
 .logo {
     float: left;
@@ -64,6 +54,67 @@ header{
         height: 20px;
         padding-right:5px ;}
 }
+
+/*------Main------*/
+.mainContent{
+    background-color: #f2f2f2;
+    height: 1300px;
+    margin-top: 5px;
+    margin-bottom:5px ;
+    padding: 30px;
+    border: solid, 5px, #f56f3a;
+    align-items: center;
+    justify-items: center;
+}
+
+.mainContent h2{
+    background-color: #f56f3a;
+    color: #f1f1f1 ;
+    margin: 0;
+    padding: 10px;
+}
+/*------Main------*/
+
+/*--------Carrusel-----------*/
+.carrusel {
+    padding: 50px;
+    position: relative;
+    width: 320px; 
+    overflow: hidden;
+}
+
+.imagenes {
+    padding: 10px;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.imagenes img {
+    width: 100px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(146, 146, 146, 0.857);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+}
+
+#anterior {
+    left: 10px;
+}
+
+#siguiente {
+    right: 10px;
+}
+/*--------Carrusel-----------*/
+
 /*--------Footer----------*/
 .footer {
     background-color: #f2f2f2;
@@ -129,41 +180,3 @@ header{
         color: #f56f3a;}
 }
 /*--------Footer----------*/
-/*--------Carrusel-----------*/
-.carrusel {
-    position: relative;
-    max-width: 200px;
-    margin: auto;
-    overflow: hidden;
-    padding-top: 30px;
-}
-
-.imagenes {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.imagenes img {
-    max-width: 100%;
-    display: block;
-}
-
-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-#prev {
-    left: 10px;
-}
-
-#next {
-    right: 10px;
-}
-/*--------Carrusel-----------*/

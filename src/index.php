@@ -17,13 +17,13 @@
                 <a href="login/login.php" class="montaPc">Monta tu PC</a>
                 <a href="login/login.php" class="carrito"><img src="img/carrito.png" alt="carrito"></a>
                 <a href="login/login.php" class="loginButton"><img src="img/login.png" alt="login">
-                <?php //Comprobamos a la hora de salir de la pagina de login para que en el caso de que no se haya iniciado sesion y se quiera salir no de error a la hora de mostrar el email
-                    if (isset($_SESSION['correo']) && !empty($_SESSION['correo'])) {
-                        echo $_SESSION['correo'];
-                    } else {
-                        echo 'Mi cuenta';
-                    }
-                ?>
+                    <?php //Comprobamos a la hora de salir de la pagina de login para que en el caso de que no se haya iniciado sesion y se quiera salir no de error a la hora de mostrar el email
+                        if (isset($_SESSION['correo']) && !empty($_SESSION['correo'])) {
+                            echo $_SESSION['correo'];
+                        } else {
+                            echo 'Mi cuenta';
+                        }
+                    ?>
                 </a>                    
         </header>
 
