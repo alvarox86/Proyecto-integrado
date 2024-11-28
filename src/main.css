@@ -124,11 +124,10 @@ button {
 }
 
 .data {
-    margin-top: 280px;
     display: flex;
     flex-wrap: wrap;
     gap: 40px; 
-
+    margin-top: 100px;
 }
 
 .card {
