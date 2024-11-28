@@ -74,6 +74,7 @@ Promise.all([
 
     prices.forEach(el => {
         let productDta = prdcts.filter(prdct => prdct.id === el.product)
+        window.productDta = productDta;
 
         $template.querySelector(".componente").setAttribute("data-price", el.id);
         $template.querySelector("img").src = productDta[0].images[0];
@@ -85,9 +86,10 @@ Promise.all([
         let $clone = $d.importNode($template, true);
 
         $fragment.appendChild($clone);
-        
+        console.log(productDta);
     })  
     $componentes.appendChild($fragment);
+    
 })
 .catch(error => {
     let message = error.statuText || "Ocurrió un error en la petición";

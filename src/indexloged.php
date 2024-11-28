@@ -20,16 +20,20 @@
         </header>
 
         <main class="mainContent">
-            <h2>Lo que vendemos</h2>
+            <h2>Nuestros productos</h2>
             <div class="carrusel">
                 <div class="imagenes" id="imagenes"></div>
                 <button id="anterior"><</button>
                 <button id="siguiente">></button>
             </div>
             <script src="main.js"></script>
+            <h2>Marcas colaboradoras</h2>
+
+            <div id="data-grid" class="data-grid"></div>
+
+            <div id="data" class="data"></div>
+
         </main>
-
-
         <footer class="footer">
             <div class="footerContent">
                 <div class="footerSection links">

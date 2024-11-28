@@ -34,21 +34,29 @@ if (isset($_POST['register'])) {
         $id_usuario = trim($_POST['id_usuario']);
         include("../../assets/ConexDb/montatupc_con_db.php");
 
-        $consulta_direccion_envio = "SELECT direccion FROM usuarios WHERE id_usuario = $id_usuario";
-        $resultado_direccion_envio = mysqli_query($conex,$consulta_direccion_envio);
-        $row = $resultado_direccion_envio->fetch_array();
-        $direccion_envio = $row['direccion'];
+       
 
-        $consulta = "INSERT INTO pedidos_envios (precio_total, estado, fecha_pedido, id_usuario, direccion_envio, descripcion_pedido) VALUES ('$precio_total', '$estado_pedido', '$fecha_reg', '$id_usuario', '$direccion_envio', '$descripcion')";
-        $resultado = mysqli_query($conex,$consulta);
+        $consultaId = "SELECT * FROM usuarios WHERE id_usuario = '$id_usuario'";
+        $resultadoId = mysqli_query($conex, $consultaId);
 
-           if($id_usuario && $estado_pedido && $descripcion && $precio_total){
+           if(mysqli_num_rows($resultadoId) === 1){
+                $consulta_direccion_envio = "SELECT direccion FROM usuarios WHERE id_usuario = $id_usuario";
+                $resultado_direccion_envio = mysqli_query($conex,$consulta_direccion_envio);
+                $row = $resultado_direccion_envio->fetch_array();
+                $direccion_envio = $row['direccion'];
+
+                $consulta = "INSERT INTO pedidos_envios (precio_total, estado, fecha_pedido, id_usuario, direccion_envio, descripcion_pedido) VALUES ('$precio_total', '$estado_pedido', '$fecha_reg', '$id_usuario', '$direccion_envio', '$descripcion')";
+                $resultado = mysqli_query($conex,$consulta);
+            if($id_usuario && $estado_pedido && $descripcion && $precio_total){
                 if($resultado) {
                     echo "<h3>¡Pedido registrado correctamente!</h3>";
                 } else {
                     echo "<h3>¡Ups ha ocurrido un error!</h3>";
                 }
             }
+           }else {
+            echo "<h3>!El usuario que ha indicado no existe</h3>";
+           }
     }      
     else {
 	    echo "<h3>¡Por favor complete los campos!</h3>";
