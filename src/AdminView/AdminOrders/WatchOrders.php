@@ -3,7 +3,7 @@
     <head>
         <title>Visualización de pedidos</title>
         <meta charset="utf-8">
-        <link rel="icon" href="../../img/logo.png">
+        <link rel="icon" href="../../assets/img/logo.png">
 		<link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>

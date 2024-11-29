@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Registro de usuario</title>
-        <link rel="icon" href="../../img/logo.png">
+        <link rel="icon" href="../../assets/img/logo.png">
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>

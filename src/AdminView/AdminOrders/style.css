@@ -32,4 +32,15 @@ form{
     padding-top: 28px; 
     margin-bottom: 30px; 
     text-align:center;
+    border-radius: 10px;
+}
+
+h3{
+    background-color: #ffd096;
+    text-align: center;
+    width: 250px;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
 }

@@ -4,7 +4,7 @@
         <title>Editar pedidos</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="icon" href="../../img/logo.png">
+        <link rel="icon" href="../../assets/img/logo.png">
     </head>
 <body>
 <a href="AdminOrders.php" align=center><h1>Volver atrás</h1></a>
@@ -33,7 +33,12 @@ if (isset($_POST['edit'])) {
 	    $id = trim($_POST['id']);
         $estado = trim($_POST['estado']);
 		include("../../assets/ConexDb/montatupc_con_db.php");
-	    $consulta = "UPDATE pedidos_envios SET estado='$estado' WHERE id_pedido='$id'";
+
+        $consultaIdPedido = "SELECT * from pedidos_envios WHERE id_pedido='$id'";
+        $resultadoIdPedido = mysqli_query($conex, $consultaIdPedido);
+
+	    if(mysqli_num_rows($resultadoIdPedido) === 1){
+        $consulta = "UPDATE pedidos_envios SET estado='$estado' WHERE id_pedido='$id'";
 	    $resultado = mysqli_query($conex,$consulta);
             if ($resultado) {
                 ?> 
@@ -44,6 +49,9 @@ if (isset($_POST['edit'])) {
                 <h3>¡Ups ha ocurrido un error!</h3>
                <?php
             }
+        }else{
+            echo "<h3>¡Este pedido no existe!</h3>";
+        }
     } else{
         echo "<h3>¡Por favor complete los campos!</h3>";
     }  	

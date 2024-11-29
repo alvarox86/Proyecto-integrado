@@ -4,7 +4,7 @@
         <title>Editar usuarios</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="icon" href="../../img/logo.png">
+        <link rel="icon" href="../../assets/img/logo.png">
     </head>
 <body>
 <a href="AdminUser.php" align=center><h1>Volver atrás</h1></a>
@@ -65,7 +65,6 @@ if (isset($_POST['borrar'])) {
 } 
 
 if (isset($_POST['edit'])) {
-    echo 
     if (strlen($_POST['nombre']) >= 1 && strlen($_POST['contrasena']) >= 1 && strlen($_POST['correo']) >= 1 && strlen($_POST['direccion']) && strlen($_POST['id']) >= 1) {
 	    $id = trim($_POST['id']);
         $nombre = trim($_POST['nombre']);

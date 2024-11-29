@@ -2,7 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="../img/logo.png">
+        <link rel="icon" href="../assets/img/logo.png">
         <meta charset="UTF-8">
         <title>MontaTuPC</title>
     </head>
