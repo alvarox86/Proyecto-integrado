@@ -16,15 +16,7 @@
                 <a href="login/login.php" class="productos">Productos</a>
                 <a href="login/login.php" class="montaPc">Monta tu PC</a>
                 <a href="login/login.php" class="carrito"><img src="assets/img/carrito.png" alt="carrito"></a>
-                <a href="login/login.php" class="loginButton"><img src="assets/img/login.png" alt="login">
-                    <?php //Comprobamos a la hora de salir de la pagina de login para que en el caso de que no se haya iniciado sesion y se quiera salir no de error a la hora de mostrar el email
-                        if (isset($_SESSION['correo']) && !empty($_SESSION['correo'])) {
-                            echo $_SESSION['correo'];
-                        } else {
-                            echo 'Mi cuenta';
-                        }
-                    ?>
-                </a>                    
+                <a href="login/login.php" class="loginButton"><img src="assets/img/login.png" alt="login">Mi cuenta</a>                    
         </header>
 
         <main class="mainContent">
@@ -33,15 +25,13 @@
                     <div class="imagenes" id="imagenes"></div>
                     <button id="anterior"><</button>
                     <button id="siguiente">></button>
-                </div><br><br><br><br><br><br>
+                </div>
 
             <script src="main.js"></script>
             
             <h2>Marcas colaboradoras</h2>
 
             <div id="data-grid" class="data-grid"></div>
-
-            <br><br><br><br><br><br>
 
             <h3>Condiciones de envio</h3>
             <div id="data" class="data"></div>

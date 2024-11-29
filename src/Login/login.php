@@ -17,11 +17,19 @@
             <input type="email" name="correo" placeholder="Correo electrónico"><br><br>
             <input type="password" name="contrasena" placeholder="Contraseña"><br><br>
             <input type="submit" name="login"><br><br>
-            <b><a href="../index.php">Volver al inicio</a></b><br><br>
+            <input type="submit" name="volver" value="Volver al inicio"><br><br>
             <b>¿No tienes cuenta? : <a href="register.php">Crear nueva cuenta</a></b>
         </form>
     </div>
     <?php
+        if(isset($_POST['volver'])){//Comprobamos si previamente se habia iniciado sesion ya que a la hora de volver al inicio volvias a index cuando ya habia iniciado sesión 
+            if(!empty($_SESSION['correo'])){
+                header("Location: ../indexloged.php");
+            }else{
+                header("Location: ../index.php");
+            }
+        }    
+
         if (isset($_POST['login'])) { //Comprueba que se ha pulsado el botón de login y esten completos los campos
             if (strlen($_POST['contrasena']) >= 1 && strlen($_POST['correo']) >= 1) {
                 $correo = trim($_POST['correo']);

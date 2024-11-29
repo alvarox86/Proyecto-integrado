@@ -15,7 +15,7 @@
 		<input type="text" name="direccion" placeholder="Dirección"><br><br>
 		<input type="password" name="contrasena" placeholder="Contraseña"><br><br>
         <input type="submit" name="register"><br><br>
-        <b><a href="../indexloged.php">Volver al inicio</a></b><br><br>
+        <b><a href="../index.php">Volver al inicio</a></b><br><br>
 		<b><a href="../login/login.php">Volver a iniciar sesión</a></b>
     </form>
 </div>
@@ -31,7 +31,7 @@ if (isset($_POST['register'])) {
 	    $consultaCorreo = "SELECT * FROM usuarios WHERE correo = '$correo'";
         $resultadoCorreo = mysqli_query($conex, $consultaCorreo);
         
-        if(mysqli_num_rows($resultadoCorreo) === 1){            
+        if(mysqli_num_rows($resultadoCorreo) === 1){//Comprobacion de que el correo no se haya utilizado previamente para crear otro usuario
             echo "<h3>¡El correo ya esta en uso!</h3>";
         } else
            if($nombre && $correo && $contrasena && $fecha_reg && $direccion ){

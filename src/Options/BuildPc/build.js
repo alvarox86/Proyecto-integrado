@@ -1,18 +1,15 @@
 //Importamos las keys de la API de stripe
 import KEYS from "../../assets/Keys.js";
 
-//Variables
 let allContainerCart = document.querySelector('.componentes');//Añade a la variable allContainerCart el contenido del elemento componentes
 let containerBuyCart = document.querySelector('.card-items');
 let priceTotal = document.querySelector('.price-total')
 let amountProduct = document.querySelector('.count-product');
 
-
 let buyThings = [];
 let totalCard = 0;
 let countProduct = 0;
 
-//Funciones
 loadEventListenrs();
 function loadEventListenrs(){
     allContainerCart.addEventListener('click', addProduct);//Llama a la función addProduct cuando hacemos click en el botón
@@ -20,7 +17,7 @@ function loadEventListenrs(){
     containerBuyCart.addEventListener('click', deleteProduct);//Llama a la función deleteProduct cuando hacemos click en el botón
 }
 
-function addProduct(e){ //Función encargada de añadir productos al carrito
+function addProduct(e){ //Función encargada de añadir productos al carrito para que se muestren
     e.preventDefault();
 
     if (e.target.classList.contains('addCart')) {
@@ -29,7 +26,7 @@ function addProduct(e){ //Función encargada de añadir productos al carrito
     }
 }
 
-function deleteProduct(e) { //Función para eliminar productos del carrito
+function deleteProduct(e) { //Función para eliminar productos del carrito de manera visual
     if (e.target.classList.contains('delete-product')) {
         const deleteId = e.target.getAttribute('data-id');
         buyThings.forEach(value => {
@@ -112,9 +109,18 @@ $d.addEventListener("click", e => {
             cartItems.push({ priceId, quantity }); // Agregar nuevo producto al carrito
         }
     }
+
+    if (e.target.matches(".delete-product")) {//Funcion para eliminar los producto del array donde se alojaban los producto que se iban a comprar
+        const priceId = e.target.getAttribute("data-id");
+
+        const itemIndex = cartItems.findIndex(item => item.priceId === priceId);
+        if (itemIndex > -1) {
+            cartItems.splice(itemIndex, 1); // Eliminar el producto del carrito
+        } 
+    }
     
         if (e.target.matches(".realizarPedido")) {// Realizar pedido
-            if(cartItems.length >= 10 ){
+            if(cartItems.length >= 10 ){// Comprueba que los productos que haya en el carrito sea superior a 10
                 // Crear un array de lineItems a partir de cartItems
                 const lineItems = cartItems.map(item => ({
                     price: item.priceId,

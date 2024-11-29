@@ -1,12 +1,10 @@
 //Importamos las keys de la API de stripe
 import KEYS from "../../assets/Keys.js";
 
-//Variables
 let allContainerCart = document.querySelector('.componentes');//Añade a la variable allContainerCart el contenido del elemento componentes
 let containerBuyCart = document.querySelector('.card-items');
 let priceTotal = document.querySelector('.price-total')
 let amountProduct = document.querySelector('.count-product');
-
 
 let buyThings = [];
 let totalCard = 0;
@@ -115,16 +113,12 @@ $d.addEventListener("click", e => {
         }
     }
 
-    if (e.target.matches(".delete-product")) {
+    if (e.target.matches(".delete-product")) { //Funcion para eliminar los producto del array donde se alojaban los producto que se iban a comprar
         const priceId = e.target.getAttribute("data-id");
 
-        // Encontrar el índice del producto en el carrito
         const itemIndex = cartItems.findIndex(item => item.priceId === priceId);
         if (itemIndex > -1) {
             cartItems.splice(itemIndex, 1); // Eliminar el producto del carrito
-            console.log(`Producto eliminado: ${priceId}`);
-        } else {
-            console.log(`El producto ${priceId} no se encontró en el carrito.`);
         }
     }
 

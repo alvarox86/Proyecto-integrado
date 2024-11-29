@@ -25,12 +25,11 @@
                 <div class="imagenes" id="imagenes"></div>
                 <button id="anterior"><</button>
                 <button id="siguiente">></button>
-            </div><br><br><br><br><br><br>
+            </div>
             <script src="main.js"></script>
             <h2>Marcas colaboradoras</h2>
 
             <div id="data-grid" class="data-grid"></div>
-            <br><br><br><br><br><br>
 
             <h3>Condiciones de envio</h3>
             <div id="data" class="data"></div>

@@ -60,20 +60,21 @@ header{
     background-color: #f2f2f2;
     margin-top: 5px;
     margin-bottom:5px ;
-    padding: 30px;
+    padding-top: 50px;
     border: solid, 5px, #f56f3a;
     align-items: center;
     justify-items: center;
 }
 
 .mainContent h2{
+    margin-top: 50px;
     background-color: #f56f3a;
     color: #f1f1f1 ;
-    margin: 0;
     padding: 10px;
 }
 
 .mainContent h3{
+    margin-top: 50px;
     background-color: #f56f3a;
     color: #f1f1f1 ;
     padding: 10px;
@@ -122,10 +123,11 @@ button {
 
 /*-------Marcas-------------*/
 .data-grid {
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     gap: 40px; 
+    padding: 20px;
 }
 
 .data {
@@ -133,6 +135,8 @@ button {
     flex-wrap: wrap;
     gap: 40px; 
     margin-top: 50px;
+    padding: 20px;
+
 }
 
 .card {
