@@ -8,15 +8,15 @@
         <meta charset="UTF-8">
         <title>MontaTuPC</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="../../img/logo.png">
+        <link rel="icon" href="../../assets/img/logo.png">
     </head>
 <script src="build.js" type="module"></script>
     <body>
         <header>
-                <a href="../../indexloged.php" class="logo"><img src="../../img/logo.png" alt="logotipo"></a>
+                <a href="../../indexloged.php" class="logo"><img src="../../assets/img/logo.png" alt="logotipo"></a>
                 <a href="../Products/products.php" class="productos">Productos</a>
                 <a href="../BuildPc/build.php" class="montaPc">Monta tu PC</a>
-                <a class="carrito"><img src="../../img/carrito.png" alt="carrito" onclick="showCart(this)"><p class="count-product">0</p></a>
+                <a class="carrito"><img src="../../assets/img/carrito.png" alt="carrito" onclick="showCart(this)"><p class="count-product">0</p></a>
                 <div class="cart-products" id="products-id">
                     <p class="close-btn" onclick="closeBtn()">X</p>
                     <h3>Mi carrito</h3>
@@ -24,7 +24,7 @@
                     <h2>Total: <strong class="price-total">0</strong>€</h2>
                     <a class="realizarPedido">Realizar pedido</a>
                 </div>
-            <a href="../../login/login.php" class="loginButton"><img src="../../img/login.png" alt="login"><?php echo $_SESSION['correo']; ?></a>
+            <a href="../../login/login.php" class="loginButton"><img src="../../assets/img/login.png" alt="login"><?php echo $_SESSION['correo']; ?></a>
         </header>
 
     <section class="container">
@@ -69,8 +69,8 @@
                 <div class="footerSection payments">
                     <h4>Métodos de pago</h4>
                     <ul>
-                        <li><a><img src="../../img/mastercard.png" alt="mastercard" class="mastercard"></a></li>
-                        <li><a><img src="../../img/visa.png" alt="visa" class="visa"></a></li>
+                        <li><a><img src="../../assets/img/mastercard.png" alt="mastercard" class="mastercard"></a></li>
+                        <li><a><img src="../../assets/img/visa.png" alt="visa" class="visa"></a></li>
                     </ul>
                 </div>
             </div>

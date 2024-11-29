@@ -8,13 +8,16 @@ const imagenes = [
     'assets/ImgC/fuente.webp',
     'assets/ImgC/grafica.webp',
     'assets/ImgC/m2.webp',
+    'assets/ImgC/128-apple-iphone-13-128gb-blanco-estrella-libre.webp',
     'assets/ImgC/monitor.webp',
     'assets/ImgC/placa.webp',
+    'assets/ImgC/1650-samsung-galaxy-s24-8-256gb-gris-marble-libre.webp',
     'assets/ImgC/procesador.webp',
     'assets/ImgC/ram.webp',
+    'assets/ImgC/1646-apple-iphone-14-128gb-blanco-estrella-libre - copia.webp',
     'assets/ImgC/raton.webp',
     'assets/ImgC/teclado.webp',
-    'assets/ImgC/torre.webp',
+    'assets/ImgC/torre.webp'
 ];
 let indiceActual = 0;
 const cantidadImagenes = 3;
@@ -77,12 +80,12 @@ function createDataGrid(images) {
 createDataGrid(images);
 
 const envios = [
-    { src: 'assets/imgE/benef-dev-15-ene-v2.webp' },
-    { src: 'assets/imgE/benef-dev-24h-1-v2.webp' },
-    { src: 'assets/imgE/benef-dev-24h-v2.webp' },
-    { src: 'assets/imgE/benef-envio-gratis-v2.webp' },
-    { src: 'assets/imgE/benef-gar-solucion-v2.webp' },
-    { src: 'assets/imgE/promociones.webp' },
+    { src: 'assets/imgE/benef-dev-15-ene-v2.webp', title:'15 Días para su devolución' },
+    { src: 'assets/imgE/benef-dev-24h-1-v2.webp',title:'¡Devoluciones gratutitas!' },
+    { src: 'assets/imgE/benef-dev-24h-v2.webp',title:'¡Recibes tu pedido antes de 24 horas!' },
+    { src: 'assets/imgE/benef-envio-gratis-v2.webp',title:'¡Envios gratuitos a partir de 50€!' },
+    { src: 'assets/imgE/benef-gar-solucion-v2.webp',title:'Garantia de de sustitucion y/o devolucion en 24 horas' },
+    { src: 'assets/imgE/promociones.webp',title:'Siempre tenemos ofertas y promociones' },
 ]
 
 function createDataGrod(envios) {
@@ -95,7 +98,12 @@ function createDataGrod(envios) {
         const img = document.createElement('img');
         img.src = envio.src;
 
+        const title = document.createElement('div');
+        title.className = 'card-title';
+        title.textContent = envio.title;
+
         card.appendChild(img);
+        card.appendChild(title);
         data.appendChild(card);
     });
 }

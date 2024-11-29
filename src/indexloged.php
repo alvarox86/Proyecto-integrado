@@ -7,16 +7,16 @@
         <meta charset="UTF-8">
         <title>MontaTuPC</title>
         <link rel="stylesheet" href="main.css">
-        <link rel="icon" href="img/logo.png">
+        <link rel="icon" href="assets/img/logo.png">
     </head>
     <body>
     <script src="main.js"  type="module"></script>
         <header>
-                <a href="indexloged.php" class="logo"><img src="img/logo.png" alt="logotipo"></a>
+                <a href="indexloged.php" class="logo"><img src="assets/img/logo.png" alt="logotipo"></a>
                 <a href="Options/Products/products.php" class="productos">Productos</a>
                 <a href="Options/BuildPc/build.php" class="montaPc">Monta tu PC</a>
-                <a class="carrito"><img src="img/carrito.png" alt="carrito"></a>
-                <a href="login/login.php" class="loginButton"><img src="img/login.png" alt="login"><?php echo $_SESSION['correo']; ?></a>                    
+                <a class="carrito"><img src="assets/img/carrito.png" alt="carrito"></a>
+                <a href="login/login.php" class="loginButton"><img src="assets/img/login.png" alt="login"><?php echo $_SESSION['correo']; ?></a>                    
         </header>
 
         <main class="mainContent">
@@ -30,7 +30,9 @@
             <h2>Marcas colaboradoras</h2>
 
             <div id="data-grid" class="data-grid"></div>
+            <br><br><br><br><br><br>
 
+            <h3>Condiciones de envio</h3>
             <div id="data" class="data"></div>
 
         </main>
@@ -53,8 +55,8 @@
                 <div class="footerSection payments">
                     <h4>Métodos de pago</h4>
                     <ul>
-                        <li><a><img src="img/mastercard.png" alt="mastercard" class="mastercard"></a></li>
-                        <li><a><img src="img/visa.png" alt="visa" class="visa"></a></li>
+                        <li><a><img src="assets/img/mastercard.png" alt="mastercard" class="mastercard"></a></li>
+                        <li><a><img src="assets/img/visa.png" alt="visa" class="visa"></a></li>
                     </ul>
                 </div>
             </div>
