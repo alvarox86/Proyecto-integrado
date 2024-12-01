@@ -68,8 +68,8 @@
                 <div class="footerSection payments">
                     <h4>Métodos de pago</h4>
                     <ul>
-                        <li><a><img src="../../img/mastercard.png" alt="mastercard" class="mastercard"></a></li>
-                        <li><a><img src="../../img/visa.png" alt="visa" class="visa"></a></li>
+                        <li><a><img src="../../assets/img/mastercard.png" alt="mastercard" class="mastercard"></a></li>
+                        <li><a><img src="../../assets/img/visa.png" alt="visa" class="visa"></a></li>
                     </ul>
                 </div>
             </div>
