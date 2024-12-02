@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,11 +18,18 @@
 		<input type="text" name="direccion" placeholder="Dirección"><br><br>
 		<input type="password" name="contrasena" placeholder="Contraseña"><br><br>
         <input type="submit" name="register"><br><br>
-        <b><a href="../index.php">Volver al inicio</a></b><br><br>
-		<b><a href="../login/login.php">Volver a iniciar sesión</a></b>
+        <input type="submit" name="volver" value="Volver al inicio"><br><br>
+        		<b><a href="../login/login.php">Volver a iniciar sesión</a></b>
     </form>
 </div>
 <?php
+if(isset($_POST['volver'])){//Comprobamos si previamente se habia iniciado sesion ya que a la hora de volver al inicio volvias a index cuando ya habia iniciado sesión 
+    if(!empty($_SESSION['correo'])){
+        header("Location: ../indexloged.php");
+    }else{
+        header("Location: ../index.php");
+    }
+}
 if (isset($_POST['register'])) {
     if (strlen($_POST['nombre']) >= 1 && strlen($_POST['contrasena']) >= 1 && strlen($_POST['correo']) >= 1 && strlen($_POST['direccion'])) {
 	    $nombre = trim($_POST['nombre']);

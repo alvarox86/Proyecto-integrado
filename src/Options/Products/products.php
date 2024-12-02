@@ -17,6 +17,7 @@
                 <a href="products.php" class="productos">Productos</a>
                 <a href="../BuildPc/build.php" class="montaPc">Monta tu PC</a>
                 <a class="carrito"><img src="../../assets/img/carrito.png" alt="carrito" onclick="showCart(this)"><p class="count-product">0</p></a>
+                
                 <div class="cart-products" id="products-id">
                     <p class="close-btn" onclick="closeBtn()">X</p>
                     <h3>Mi carrito</h3>
@@ -24,6 +25,7 @@
                     <h2>Total: <strong class="price-total">0</strong>€</h2>
                     <a class="realizarPedido">Realizar pedido</a>
                 </div>
+
             <a href="../../login/login.php" class="loginButton"><img src="../../assets/img/login.png" alt="login"><?php echo $_SESSION['correo']; ?></a>
         </header>
     <section class="container">
