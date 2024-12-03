@@ -55,7 +55,7 @@ if (isset($_POST['register'])) {
                 }
             }
            }else {
-            echo "<h3>!El usuario que ha indicado no existe</h3>";
+            echo "<h3>!El pedido que ha indicado no existe</h3>";
            }
     }      
     else {
