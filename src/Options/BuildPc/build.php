@@ -16,7 +16,7 @@
                 <a href="../../indexloged.php" class="logo"><img src="../../assets/img/logo.png" alt="logotipo"></a>
                 <a href="../Products/products.php" class="productos">Productos</a>
                 <a href="../BuildPc/build.php" class="montaPc">Monta tu PC</a>
-                <a class="carrito"><img src="../../assets/img/carrito.png" alt="carrito" onclick="showCart(this)"><p class="count-product">0</p></a>
+                <a class="carrito" onclick="showCart(this)" ><img src="../../assets/img/carrito.png" alt="carrito" ><p class="count-product">0</p></a>
                 <div class="cart-products" id="products-id">
                     <p class="close-btn" onclick="closeBtn()">X</p>
                     <h3>Mi carrito</h3>

@@ -16,10 +16,10 @@
                 <a href="../../indexloged.php" class="logo"><img src="../../assets/img/logo.png" alt="logotipo"></a>
                 <a href="products.php" class="productos">Productos</a>
                 <a href="../BuildPc/build.php" class="montaPc">Monta tu PC</a>
-                <a class="carrito"><img src="../../assets/img/carrito.png" alt="carrito" onclick="showCart(this)"><p class="count-product">0</p></a>
+                <a class="carrito" onclick="showCart(this)" ><img src="../../assets/img/carrito.png" alt="carrito" ><p class="count-product">0</p></a>
                 
                 <div class="cart-products" id="products-id">
-                    <p class="close-btn" onclick="closeBtn()">X</p>
+                    <p class="close-btn" onclick="closeBtn()">x</p>
                     <h3>Mi carrito</h3>
                     <div class="card-items"></div>
                     <h2>Total: <strong class="price-total">0</strong>€</h2>
@@ -42,13 +42,14 @@
     </template>
 
         <script>
-            function showCart(x){
+            function showCart(){
                 document.getElementById("products-id").style.display = "block";
             }
             function closeBtn(){
                 document.getElementById("products-id").style.display = "none";
             }
         </script>
+        
     </section>
 
         <footer class="footer">

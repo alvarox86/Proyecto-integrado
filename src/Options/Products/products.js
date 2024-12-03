@@ -10,7 +10,6 @@ let buyThings = [];
 let totalCard = 0;
 let countProduct = 0;
 
-//Funciones
 loadEventListenrs();
 function loadEventListenrs(){
     allContainerCart.addEventListener('click', addProduct);//Llama a la función addProduct cuando hacemos click en el botón
@@ -63,8 +62,8 @@ let prdcts, prices;
 Promise.all([
     fetch("https://api.stripe.com/v1/products", options),
     fetch("https://api.stripe.com/v1/prices", options)
-
 ])
+
 .then(responses => Promise.all(responses.map(res => res.json())))
 .then(json => {
     prdcts = json[0].data;
@@ -84,7 +83,6 @@ Promise.all([
         let $clone = $d.importNode($template, true);
 
         $fragment.appendChild($clone);
-        console.log(productDta);
     })  
     $componentes.appendChild($fragment);
     
@@ -99,7 +97,6 @@ const cartItems = []; // Array para almacenar los productos del carrito
 
 $d.addEventListener("click", e => {
     // Agregar producto al carrito
-    console.log(cartItems);
     if (e.target.matches(".addCart")) {
         const priceId = e.target.getAttribute("data-id");
         const quantity = 1;

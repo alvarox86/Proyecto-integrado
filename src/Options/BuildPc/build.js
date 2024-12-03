@@ -120,7 +120,7 @@ $d.addEventListener("click", e => {
     }
     
         if (e.target.matches(".realizarPedido")) {// Realizar pedido
-            if(cartItems.length >= 10 ){// Comprueba que los productos que haya en el carrito sea superior a 10
+            if(cartItems.length >= 10 ){// Comprueba que los productos que haya en el carrito sea superior a 10 y diferentes entre ellos
                 // Crear un array de lineItems a partir de cartItems
                 const lineItems = cartItems.map(item => ({
                     price: item.priceId,

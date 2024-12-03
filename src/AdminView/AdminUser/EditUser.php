@@ -38,13 +38,14 @@
     </form>      
 </div>
 
-
 <?php
 if (isset($_POST['borrar'])) {
     if (strlen($_POST['nombre']) >= 1 && strlen($_POST['contrasena']) >= 1 && strlen($_POST['correo']) >= 1 && strlen($_POST['direccion'])) {
 	    $nombre = trim($_POST['nombre']);
 	    $contrasena = trim($_POST['contrasena']);
-	    $fecha_reg = date("d/m/y");
+        $correo = trim($_POST['correo']);
+        $direccion = trim($_POST['direccion']);
+
 		include("../../assets/ConexDb/montatupc_con_db.php");
 	    $consulta = "DELETE FROM usuarios WHERE nombre ='$nombre' AND contrasena = '$contrasena'";
 	    $resultado = mysqli_query($conex,$consulta);

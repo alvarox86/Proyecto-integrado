@@ -51,7 +51,7 @@ siguienteButton.addEventListener('click', () => {
 });
 
 mostrarImagenes();
-
+//-----------------------------------------
 const images = [
     { src: 'assets/imgM/1024px-hp-logo-2012-1.webp' },
     { src: 'assets/imgM/corsair-logo.webp' },
@@ -78,6 +78,7 @@ function createDataGrid(images) {
 }
 
 createDataGrid(images);
+//-----------------------------------------
 
 const envios = [
     { src: 'assets/imgE/benef-dev-15-ene-v2.webp', title:'15 Días para su devolución' },
