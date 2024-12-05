@@ -8,10 +8,10 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="../assets/img/logo.png">
-
 </head>
 <body>
     <h1>Bienvenido administrador </h1>
+    <h2 class="correo"><?php echo $_SESSION['correo']; ?></h2>
     <h3>¿Qué deseas ver?</h3>
 
         <nav><br><br>

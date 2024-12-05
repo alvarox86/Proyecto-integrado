@@ -6,7 +6,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>MontaTuPC</title>
+        <title>Productos</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="../../assets/img/logo.png">
     </head>

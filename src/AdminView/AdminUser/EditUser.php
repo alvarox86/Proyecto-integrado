@@ -50,18 +50,12 @@ if (isset($_POST['borrar'])) {
 	    $consulta = "DELETE FROM usuarios WHERE nombre ='$nombre' AND contrasena = '$contrasena'";
 	    $resultado = mysqli_query($conex,$consulta);
 	    if ($resultado) {
-	    	?> 
-	    	<h3>¡Borrado corectamente!</h3>
-           <?php
+            echo "<h3>¡Borrado corectamente!</h3>";
 	    } else {
-	    	?> 
-	    	<h3>¡Ups ha ocurrido un error!</h3>
-           <?php
+	    	echo "<h3>¡Ups ha ocurrido un error!</h3>";
 	    }
     } else{
-        ?>
-        <h3>¡Por favor complete los campos!</h3>
-        <?php
+        echo "<h3>¡Por favor complete los campos!</h3>";
     }  	
 } 
 
@@ -78,20 +72,12 @@ if (isset($_POST['edit'])) {
 	    $resultadoEdit = mysqli_query($conex,$consultaEdit);
         if ($tipousuario) {
             if ($resultadoEdit) {
-                ?> 
-                <h3>¡Editado corectamente!</h3>
-               <?php
-            } else {
-                ?> 
-                <h3>¡Ups ha ocurrido un error!</h3>
-               <?php
-            }
-        }   else{
-            echo "
-            <h3>¡Valor no permitido!</h3>
-            <h4>Solo se puede introducir admin para permisos de administrador o user para sea un usuario normal </h4>
-            ";
-            }
+                echo "<h3>¡Editado corectamente!</h3>";
+            } 
+            else {
+                echo "<h3>¡Ups ha ocurrido un error!</h3>";
+            }      
+        }
     } else{
         echo "<h3>¡Por favor complete los campos!</h3>";
     }  	
