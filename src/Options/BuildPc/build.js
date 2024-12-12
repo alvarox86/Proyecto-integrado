@@ -89,7 +89,7 @@ Promise.all([
 .catch(error => {
     let message = error.statuText || "Ocurrió un error en la petición";
 
-    $componentes.innerHTML = `Error: ${error.status}: ${message}`;
+    $componentes.innerHTML = `Error: ${message}`;
 })
 
 const cartItems = []; // Array para almacenar los productos del carrito

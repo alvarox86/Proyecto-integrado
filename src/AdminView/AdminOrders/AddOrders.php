@@ -19,7 +19,7 @@
             <option value="Entregado">Entregado</option>
             <option value="Cancelado">Cancelado</option>
         </select><br><br>
-        <textarea type="text" name="descripcion" placeholder="Detalles del pedido" cols="50" rows="10"></textarea><br><br>
+        <textarea type="text" name="descripcion" placeholder="Detalles del pedido" cols="40" rows="10"></textarea><br><br>
         <input type="submit" name="register" ><br><br>
         <b><a href="adminOrders.php">Volver atrás</a></b><br><br>
     </form>
@@ -55,7 +55,7 @@ if (isset($_POST['register'])) {
                 }
             }
            }else {
-            echo "<h3>!El pedido que ha indicado no existe</h3>";
+            echo "<h3>El usuario que ha indicado no existe</h3>";
            }
     }      
     else {

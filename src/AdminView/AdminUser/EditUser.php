@@ -28,8 +28,8 @@
             <input type="text" name="direccion" placeholder="Dirección"><br><br>
             <input type="password" name="contrasena" placeholder="Contraseña"><br><br>
             <select name="tipousuario">
-                <option value="admin">admin</option>
                 <option value="user">user</option>
+                <option value="admin">admin</option>
             </select><br><br>
             <input type="submit" name="edit" value="Editar"><br><br>
             <p><b>Nota:</b></p>

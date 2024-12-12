@@ -28,7 +28,6 @@ function mostrarImagenes() {
     for (let i = indiceActual; i < indiceActual + cantidadImagenes && i < imagenes.length; i++) {
         const img = document.createElement('img');
         img.src = imagenes[i];
-        img.alt = `Imagen ${i + 1}`;
         imagenesElement.appendChild(img);
     }
 

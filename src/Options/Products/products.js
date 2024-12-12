@@ -84,13 +84,12 @@ Promise.all([
 
         $fragment.appendChild($clone);
     })  
-    $componentes.appendChild($fragment);
-    
+    $componentes.appendChild($fragment);    
 })
 .catch(error => {
     let message = error.statuText || "Ocurrió un error en la petición";
 
-    $componentes.innerHTML = `Error: ${error.status}: ${message}`;
+    $componentes.innerHTML = `Error: ${message}`;
 })
 
 const cartItems = []; // Array para almacenar los productos del carrito
@@ -108,6 +107,7 @@ $d.addEventListener("click", e => {
         } else {
             cartItems.push({ priceId, quantity }); // Agregar nuevo producto al carrito
         }
+        console.log(cartItems);
     }
 
     if (e.target.matches(".delete-product")) { //Funcion para eliminar los producto del array donde se alojaban los producto que se iban a comprar
@@ -180,15 +180,14 @@ function loadHtml(){//Funcion para cargar el desplegable del carrito
         const {image, title, price, amount, id} = product;
         const row = document.createElement('div');
         row.classList.add('item');
-        row.innerHTML = `
-            <img src="${image}" alt="">
+        row.innerHTML = 
+        `    <img src="${image}" alt="">
             <div class="item-content">
                 <h5>${title}</h5>
                 <h5 class="cart-price">${price}</h5>
                 <h6>Amount: ${amount}</h6>
             </div>
-            <span class="delete-product" data-id="${id}">X</span>
-        `;
+            <span class="delete-product" data-id="${id}">X</span>`;
 
         containerBuyCart.appendChild(row);
 
