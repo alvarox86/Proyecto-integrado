@@ -91,6 +91,8 @@ Promise.all([
 
     $componentes.innerHTML = `Error: ${message}`;
 })
+console.log(options.prices);
+console.log(options.prodcts);
 
 const cartItems = []; // Array para almacenar los productos del carrito
 
@@ -131,8 +133,8 @@ $d.addEventListener("click", e => {
         Stripe(KEYS.public).redirectToCheckout({
             lineItems: lineItems,
             mode: "payment",
-            successUrl: "http://localhost/proyecto-integrado-master/src/assets/succes.php",
-            cancelUrl: "http://localhost/proyecto-integrado-master/src/assets/cancel.php"
+            successUrl: "http://localhost/PPI/src/assets/succes.php",
+            cancelUrl: "http://localhost/PPI/src/assets/cancel.php"
         })
         .then(res => {
             if (res.error) {
